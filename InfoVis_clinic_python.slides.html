@@ -215,20 +215,32 @@ div.output_prompt {
 <body>
 <div class="reveal">
 <div class="slides">
-<section>
-    <section>
+<aside class="notes">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction-to-Plotting-with-Python">Introduction to Plotting with Python<a class="anchor-link" href="#Introduction-to-Plotting-with-Python">&#182;</a></h1><p>Matplotlib</p>
-<p>Seaborn</p>
-<p>Pandas</p>
+<p>Export as slideshow with:</p>
+
+<pre><code>ipython nbconvert InfoVis_clinic_python.ipynb --to slides --post serve</code></pre>
 
 </div>
 </div>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hands-on-Session.">Hands-on Session.<a class="anchor-link" href="#Hands-on-Session.">&#182;</a></h3><h1 id="Quick-and-Pretty:--Publication-Quality-Plots-with-Python">Quick and Pretty:  Publication Quality Plots with Python<a class="anchor-link" href="#Quick-and-Pretty:--Publication-Quality-Plots-with-Python">&#182;</a></h1><h3 id="An-Introduction-to-Matplotlib-with-some-references-to-Seaborn-and-Pandas">An Introduction to Matplotlib with some references to Seaborn and Pandas<a class="anchor-link" href="#An-Introduction-to-Matplotlib-with-some-references-to-Seaborn-and-Pandas">&#182;</a></h3>
+</div>
+</div>
 </div></section>
     </section><section>
     <section>
@@ -238,8 +250,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h1><p><a href="http://localhost:8888/InfoVis_clinic_python.ipynb#Importing-Data-with-Pandas"></p>
-<h2 id="Importing-Data-with-Pandas-&lt;/a&gt;">Importing Data with Pandas &lt;/a&gt;<a class="anchor-link" href="#Importing-Data-with-Pandas-&lt;/a&gt;">&#182;</a></h2><h2 id="Plotting-with-Matplotlib:">Plotting with Matplotlib:<a class="anchor-link" href="#Plotting-with-Matplotlib:">&#182;</a></h2><h3 id="1.-Bar-plot">1. Bar plot<a class="anchor-link" href="#1.-Bar-plot">&#182;</a></h3><h3 id="2.-Scatter-plot">2. Scatter plot<a class="anchor-link" href="#2.-Scatter-plot">&#182;</a></h3><h3 id="3.-Line-plot">3. Line plot<a class="anchor-link" href="#3.-Line-plot">&#182;</a></h3><h2 id="Quick-and-pretty-plots-with-Seaborn">Quick and pretty plots with Seaborn<a class="anchor-link" href="#Quick-and-pretty-plots-with-Seaborn">&#182;</a></h2>
+<h1 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h1><h2 id="Importing-Data-with-Pandas">Importing Data with Pandas<a class="anchor-link" href="#Importing-Data-with-Pandas">&#182;</a></h2><h2 id="Plotting-with-Matplotlib:">Plotting with Matplotlib:<a class="anchor-link" href="#Plotting-with-Matplotlib:">&#182;</a></h2><h3 id="1.-Bar-plot">1. Bar plot<a class="anchor-link" href="#1.-Bar-plot">&#182;</a></h3><h3 id="2.-Scatter-plot">2. Scatter plot<a class="anchor-link" href="#2.-Scatter-plot">&#182;</a></h3><h3 id="3.-Line-plot">3. Line plot<a class="anchor-link" href="#3.-Line-plot">&#182;</a></h3><h2 id="Quick-and-pretty-plots-with-Seaborn">Quick and pretty plots with Seaborn<a class="anchor-link" href="#Quick-and-pretty-plots-with-Seaborn">&#182;</a></h2>
 </div>
 </div>
 </div></section>
@@ -251,17 +262,61 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Importing-Data-with-Pandas">Importing Data with Pandas<a class="anchor-link" href="#Importing-Data-with-Pandas">&#182;</a></h1>
+<h1 id="Importing-Data-with-Pandas">Importing Data with Pandas<a class="anchor-link" href="#Importing-Data-with-Pandas">&#182;</a></h1><h3 id="Pandas:-data-structures-and-data-analysis-tools-for-python"><a href="http://pandas.pydata.org/">Pandas</a>: data structures and data analysis tools for python<a class="anchor-link" href="#Pandas:-data-structures-and-data-analysis-tools-for-python">&#182;</a></h3><p><li> Data structures: Series and DataFrame similar to R</p>
+<p><li> Integrated for use with matplotlib, numpy, scipy, etc.</p>
+<p><li> Easy-to-use csv import</p>
+<p><li> Quickly filter, sort, aggregate, etc.</p>
+<p>&#10140; <a href="http://pandas.pydata.org/pandas-docs/stable/10min.html"> 10 minutes to pandas </a></p>
+
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="3">
+</div><div class="fragment" data-fragment-index="4">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="nn">ad</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Import-your-CSV-Data">Import your CSV Data<a class="anchor-link" href="#Import-your-CSV-Data">&#182;</a></h2><p><a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html"> pandas.read_csv()</a>: reads a csv file into a DataFrame object</p>
+<p>Arguments:</p>
+<p><li type=none>&#10140; separator: <br>
+<code> sep = "\t" </code> default ","</p>
+<p><li type=none>&#10140;  Others: <br>
+    <code> index_col = 0 </code>  -  column used as index / row names <br>
+    <code> header : int, list of ints </code> -  specifies the line used as header / column names. Pass header=0 if there is none.<br>
+    <code> skiprows : list-like or integer  </code> - number of lines to skip in beginning of file<br>
+    <code> names : array-like </code> - names to be used for columns <br>
+    <code> na_values : str, list-like or dict </code> - Additional strings recognized as NaN</p>
+
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&quot;typing_372392.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">)</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c">#displays only the 5 first lines</span>
 </pre></div>
 
 </div>
@@ -272,18 +327,413 @@ div.output_prompt {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>huhu
-</pre>
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>t_time</th>
+      <th>user_id</th>
+      <th>stimulus_id</th>
+      <th>input_index</th>
+      <th>iki</th>
+      <th>input</th>
+      <th>key_symbol</th>
+      <th>current_input</th>
+      <th>wpm</th>
+      <th>sd_iki</th>
+      <th>finger</th>
+      <th>right_hand</th>
+      <th>stimulus</th>
+      <th>last_input</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>988906.649</td>
+      <td>372392</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Shift_L</td>
+      <td>Shift_L</td>
+      <td>You have a nice holiday too.</td>
+      <td>87.26</td>
+      <td>165.64</td>
+      <td>L_Little</td>
+      <td>0</td>
+      <td>You have a nice holiday too.</td>
+      <td>*</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>988906.712</td>
+      <td>372392</td>
+      <td>0</td>
+      <td>1</td>
+      <td>62</td>
+      <td>y</td>
+      <td>y</td>
+      <td>You have a nice holiday too.</td>
+      <td>87.26</td>
+      <td>165.64</td>
+      <td>R_Index</td>
+      <td>1</td>
+      <td>You have a nice holiday too.</td>
+      <td>Shift_L</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>988906.930</td>
+      <td>372392</td>
+      <td>0</td>
+      <td>2</td>
+      <td>218</td>
+      <td>o</td>
+      <td>o</td>
+      <td>You have a nice holiday too.</td>
+      <td>87.26</td>
+      <td>165.64</td>
+      <td>R_Index</td>
+      <td>1</td>
+      <td>You have a nice holiday too.</td>
+      <td>y</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>988907.117</td>
+      <td>372392</td>
+      <td>0</td>
+      <td>3</td>
+      <td>187</td>
+      <td>u</td>
+      <td>u</td>
+      <td>You have a nice holiday too.</td>
+      <td>87.26</td>
+      <td>165.64</td>
+      <td>R_Index</td>
+      <td>1</td>
+      <td>You have a nice holiday too.</td>
+      <td>o</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>988907.180</td>
+      <td>372392</td>
+      <td>0</td>
+      <td>4</td>
+      <td>62</td>
+      <td>_</td>
+      <td>space</td>
+      <td>You have a nice holiday too.</td>
+      <td>87.26</td>
+      <td>165.64</td>
+      <td>L_Thumb</td>
+      <td>0</td>
+      <td>You have a nice holiday too.</td>
+      <td>u</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Access-and-filter-your-Data">Access and filter your Data<a class="anchor-link" href="#Access-and-filter-your-Data">&#182;</a></h2><h4 id="1.-Select-a-column">1. Select a column<a class="anchor-link" href="#1.-Select-a-column">&#182;</a></h4>
+</div>
+</div>
+</div><div class="fragment" data-fragment-index="8">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">data</span><span class="o">.</span><span class="n">input</span> <span class="c">#or</span>
+<span class="n">data</span><span class="p">[</span><span class="s">&quot;input&quot;</span><span class="p">]</span> <span class="c">#returns a Series object, while</span>
+<span class="n">data</span><span class="p">[[</span><span class="s">&quot;input&quot;</span><span class="p">,</span> <span class="s">&quot;iki&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c">#returns a DataFrame object</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[57]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>input</th>
+      <th>iki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Shift_L</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>y</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>o</td>
+      <td>218</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>u</td>
+      <td>187</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>_</td>
+      <td>62</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
 </div>
 
 </div>
 </div>
 
 </div>
-    </div></section>
+    </div><div class="fragment" data-fragment-index="9">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="2.-Select-the-first-row">2. Select the first row<a class="anchor-link" href="#2.-Select-the-first-row">&#182;</a></h4>
+</div>
+</div>
+</div>
+    </div><div class="fragment" data-fragment-index="10">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="c"># returns a DataFrame</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[46]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>t_time</th>
+      <th>user_id</th>
+      <th>stimulus_id</th>
+      <th>input_index</th>
+      <th>iki</th>
+      <th>input</th>
+      <th>key_symbol</th>
+      <th>current_input</th>
+      <th>wpm</th>
+      <th>sd_iki</th>
+      <th>finger</th>
+      <th>right_hand</th>
+      <th>stimulus</th>
+      <th>last_input</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>988906.649</td>
+      <td>372392</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Shift_L</td>
+      <td>Shift_L</td>
+      <td>You have a nice holiday too.</td>
+      <td>87.26</td>
+      <td>165.64</td>
+      <td>L_Little</td>
+      <td>0</td>
+      <td>You have a nice holiday too.</td>
+      <td>*</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment" data-fragment-index="11">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="3.-Select-a-specific-cell">3. Select a specific cell<a class="anchor-link" href="#3.-Select-a-specific-cell">&#182;</a></h4>
+</div>
+</div>
+</div>
+    </div><div class="fragment" data-fragment-index="12">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;wpm&quot;</span><span class="p">]</span> <span class="c">#by label or</span>
+<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="c">#by position</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>87.260000000000005</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment" data-fragment-index="13">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="4.-Filter-by-boolean-criteria">4. Filter by boolean criteria<a class="anchor-link" href="#4.-Filter-by-boolean-criteria">&#182;</a></h4><p>Show keys that were pressed within less than 100 ms. Filter out the first keypress of a sentence for which the inter-key interval is 0.</p>
+
+</div>
+</div>
+</div>
+    </div><div class="fragment" data-fragment-index="13">
+        
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="n">fast_keypresses</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">iki</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">][</span><span class="n">data</span><span class="o">.</span><span class="n">iki</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">][[</span><span class="s">&quot;key_symbol&quot;</span><span class="p">,</span> <span class="s">&quot;iki&quot;</span><span class="p">]]</span>
+<span class="n">fast_keypresses</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key_symbol</th>
+      <th>iki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>y</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>space</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>a</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>space</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>n</td>
+      <td>92</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+        </div></section>
     </section><section>
     <section>
     
@@ -299,8 +749,20 @@ div.output_prompt {
 </div>
 </div>
 
-</div></section>
-    </section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 </div>
 </div>
 
